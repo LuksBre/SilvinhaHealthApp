@@ -1,2 +1,2 @@
 # SilvinhaHealthApp
-Projeto de aplicação de apps React Native Expo para cálculo do IMC.
+Projeto de aplicação React Native Expo para cálculo do IMC.
