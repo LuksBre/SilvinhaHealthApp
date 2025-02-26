@@ -5,8 +5,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text
-      </View>
+        <Text style={styles.title}>Silvinha Health App</Text>
+        <Text style={style.textle}> silvinha tem 800 anos e revela seu segredo </Text>
+     </View>
     </View>
   );
 }
@@ -14,8 +15,22 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#e0e5e5',
+    paddingTop: 50,
+  },
+  titleContainer: {
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10,
   },
+  title: {
+    color: "#ff0043",
+    fontSize: 28,
+    fontWeight: 'bold'
+  },
+  textle:{
+    color: 'blue'
+    
+  }
+
 });
