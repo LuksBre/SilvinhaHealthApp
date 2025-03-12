@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, TextInput } from 'react-native';
-
+import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import Ionicons from "@expo/vector-icons/Ionicons"
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
@@ -11,6 +11,10 @@ export default function App() {
      <View style={styles.content}>
         <Text style={styles.subTitle}>Calculadora de IMC</Text>
      </View>
+
+     <View>
+
+     </View>
         
       <View>
         <Text Style={styles.label}>Altura</Text>
@@ -20,6 +24,23 @@ export default function App() {
           keyboardType='numeric'>
         </TextInput>
       </View>
+      
+      <View style={{ marginTop: 25}}>
+        <Text Style={styles.label}>Peso</Text>
+        <TextInput
+          style={styles.input}
+          placeholder='Ex. 1.70'
+          keyboardType='numeric'>
+        </TextInput>
+      </View>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => alert("Uga Bugaaa")}
+      >
+        <Ionicons name="calculator-sharp" size={24} color="#edf2f4"/>
+      </TouchableOpacity>
+
      <StatusBar style='light'>
 
      </StatusBar>
@@ -71,5 +92,22 @@ const styles = StyleSheet.create({
     fontSize: 18,
     borderColor: '#D90429',
     borderBottomWidth: 1
+  },
+  button: {
+    width: '100%',
+    paddingVertical: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ef233c',
+    borderRadius: 15,
+    marginTop: 40,
+    marginBottom: 10.
+  },
+  text: {
+    color: '#edf2f4',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginLeft: 5,
   }
 });

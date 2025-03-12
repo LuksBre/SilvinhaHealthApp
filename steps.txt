@@ -3,7 +3,9 @@ configurando o GIT:
 git config --global user.name LuksBre
 git config --global user.email lucasbregadioli8@gmail.com
 
-abrir o Terminal: Cntrl + '
+abrir o Terminal: 
+
+Cntrl + '
 
 Criar um projeto React Native com Expo:
 npx create-expo-app@latest SilvinhaHealthApp --template blank
