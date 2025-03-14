@@ -1,19 +1,16 @@
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import Ionicons from "@expo/vector-icons/Ionicons"
+
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Silvinha Health App</Text>
-        
      </View>
      <View style={styles.content}>
         <Text style={styles.subTitle}>Calculadora de IMC</Text>
-     </View>
-
-     <View>
-
      </View>
         
       <View>
@@ -26,10 +23,10 @@ export default function App() {
       </View>
       
       <View style={{ marginTop: 25}}>
-        <Text Style={styles.label}>Peso</Text>
+        <Text style={styles.label}>Peso</Text>
         <TextInput
           style={styles.input}
-          placeholder='Ex. 1.70'
+          placeholder='Ex. 56kg'
           keyboardType='numeric'>
         </TextInput>
       </View>
@@ -39,7 +36,13 @@ export default function App() {
         onPress={() => alert("Uga Bugaaa")}
       >
         <Ionicons name="calculator-sharp" size={24} color="#edf2f4"/>
+        <Text style={styles.text}>Calcular</Text>
       </TouchableOpacity>
+
+      <View style={styles.imcContainer}>
+        <Text style={styles.imcText}>Preencha o peso e a Altura</Text>
+        <Text style={styles.imcResult}></Text>
+      </View>
 
      <StatusBar style='light'>
 
@@ -109,5 +112,19 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginLeft: 5,
+  },
+  imcContainer:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  imcText: {
+    fontSize: 18,
+    color: '#ef233c',
+    fontWeight: 'bold',
+  },
+  imcResult: {
+    fontSize: 48,
   }
 });
