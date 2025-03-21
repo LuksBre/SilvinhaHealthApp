@@ -1,52 +1,50 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import Ionicons from "@expo/vector-icons/Ionicons"
+import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity} from 'react-native';
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Silvinha Health App</Text>
-     </View>
-     <View style={styles.content}>
-        <Text style={styles.subTitle}>Calculadora de IMC</Text>
-     </View>
-        
-      <View>
-        <Text Style={styles.label}>Altura</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='Ex. 1.70'
-          keyboardType='numeric'>
-        </TextInput>
+      <View style={styles.titlecontainer}>
+       <Text style={styles.title}>Silvinha Health App</Text>
       </View>
-      
-      <View style={{ marginTop: 25}}>
-        <Text style={styles.label}>Peso</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='Ex. 56kg'
-          keyboardType='numeric'>
-        </TextInput>
+      <View style={styles.content}>
+       <Text style={styles.subtitle}>Calculadora de IMC</Text>
+
+        <View>
+          <Text style={styles.label}>Altura</Text>
+          <TextInput
+            style={styles.input}
+            placeholder='Ex. 1.70'
+            keyboardType='numeric'
+          ></TextInput>
+        </View>
+
+        <View style={{ marginTop: 25 }}>
+          <Text style={styles.label}>Peso</Text>
+          <TextInput
+            style={styles.input}
+            placeholder='Ex. 56Kg'
+            keyboardType='numeric'
+          ></TextInput>
+        </View>
+
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={() => alert("OREIIAAAAAAAAAAAA")}
+        >
+          <Ionicons name="calculator-sharp" size={24} color="#edf2f4" />
+          <Text style={styles.text}>Calcular</Text>-
+        </TouchableOpacity>
+
+        <View style={styles.imcContainer}>
+          <Text style={styles.imcText}>Preencha o peso e a altura</Text>
+          <Text style={styles.imcResult}></Text>
+        </View>
+
       </View>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => alert("Uga Bugaaa")}
-      >
-        <Ionicons name="calculator-sharp" size={24} color="#edf2f4"/>
-        <Text style={styles.text}>Calcular</Text>
-      </TouchableOpacity>
-
-      <View style={styles.imcContainer}>
-        <Text style={styles.imcText}>Preencha o peso e a Altura</Text>
-        <Text style={styles.imcResult}></Text>
-      </View>
-
-     <StatusBar style='light'>
-
-     </StatusBar>
+      <StatusBar style='light' />
     </SafeAreaView>
   );
 }
@@ -54,36 +52,36 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e0e5e5',
+    backgroundColor: '#EDF2F4',
 
   },
-  titleContainer: {
-    alignItems: 'center',
+  titlecontainer: {
+    alignItems:'center',
     justifyContent: 'flex-end',
     height: 130,
     backgroundColor: '#D90429',
     borderBottomStartRadius: 25,
-    borderBottomEndRadius: 25
+    borderBottomEndRadius: 25,
   },
-  title: {
-    color: "#EDF2F4",
+  title:{
+    color:'#EDF2F4',
     fontSize: 28,
-    fontWeight: 'bold',
+    fontWeight:'bold',
     marginBottom: 30,
-  }, 
-  content: {
+  },
+  content:{
     flex: 1,
     padding: 40,
-    width: '100%',
-    backgroundColor: '#EDF2F4'
+    width:'100%',
+    backgroundColor:'EDF2F4'
+    
   },
-  subTitle: {
+  subtitle:{
     textAlign: 'center',
     fontSize: 24,
-    color: "#D90429",
-    fontWeight: 'bold',
+    color:'#D90429',
+    fontWeight:'bold',
     marginBottom: 40,
-    
   },
   label:{
     color: '#000',
@@ -91,11 +89,12 @@ const styles = StyleSheet.create({
   },
   input:{
     height: 45,
-    width: '100%',
+    width:'100%',
     fontSize: 18,
     borderColor: '#D90429',
-    borderBottomWidth: 1
+    borderBottomWidth: 1,
   },
+
   button: {
     width: '100%',
     paddingVertical: 15,
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ef233c',
     borderRadius: 15,
     marginTop: 40,
-    marginBottom: 10.
+    marginbottom: 10,
   },
   text: {
     color: '#edf2f4',
@@ -113,7 +112,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 5,
   },
-  imcContainer:{
+  imcContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -121,10 +120,12 @@ const styles = StyleSheet.create({
   },
   imcText: {
     fontSize: 18,
-    color: '#ef233c',
+    color: '#ef223c',
     fontWeight: 'bold',
   },
   imcResult: {
     fontSize: 48,
+    color: '#ef233c',
+    fontWeight: 'bold',
   }
 });

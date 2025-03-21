@@ -10,6 +10,15 @@ Cntrl + '
 Criar um projeto React Native com Expo:
 npx create-expo-app@latest SilvinhaHealthApp --template blank
 
+
+git config --global user.name LuksBre
+git config --global user.email lucasbregadioli8@gmail.com
+
+
+cd SilvinhaHealthApp
+
 npm i
+
+npx expo start --localhost --android
 
 
